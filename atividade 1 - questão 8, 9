@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+    public class questao8 {
+        public static void main(String[] args) {
+
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Digite a cotação do dólar (em R$): ");
+            float cotacaoDolar = scanner.nextFloat();
+
+
+            System.out.print("Digite a quantidade de dólares disponíveis: ");
+            float quantidadeDolares = scanner.nextFloat();
+
+
+            float valorEmReais = cotacaoDolar * quantidadeDolares;
+
+
+            System.out.printf("O valor convertido é de R$ %.2f%n", valorEmReais);
+
+            scanner.close();
+        }
+    }
