@@ -1,0 +1,12 @@
+public class questao3 {
+    public static void main(String[] args) {
+
+        int distancia_total_km = 4;
+        int combustivel_gasto_litros = 30;
+
+        double consumo_medio = (double) distancia_total_km / combustivel_gasto_litros;
+
+        System.out.println(String.format("O consumo médio gasto é de %.2f km por litro", consumo_medio));
+
+    }
+}
