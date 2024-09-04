@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class questao7 {
+    public static void main(String[] args){
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digita a temperatura do dia em graus Celsius: ");
+        int C = scanner.nextInt();
+
+        int F;
+
+        F=(9 * C + 160) / 5;
+
+        System.out.println("Temperatura convertida em Fahrenheit: " +F);
+
+        scanner.close();
+    }
+}
