@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class questao10 {
+    public static void main(String[] args){
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite o valor da sua compra: ");
+        float valorCompra = scanner.nextFloat();
+
+        float prestacao;
+
+        prestacao = (valorCompra / 5);
+
+        System.out.printf("O valor da sua prestação é de R$ %.2f por mês", prestacao);
+
+
+        scanner.close();
+
+    }
+}
