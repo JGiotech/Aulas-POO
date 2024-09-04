@@ -1,0 +1,18 @@
+public class questao4 {
+    public static void main(String[] args) {
+
+        String nome = "Robervaldo";
+        float salario_fixo =  1460.50f;
+        float total_vendas_dinheiro =  5000f;
+
+        float taxa_de_comissao = 0.15f;
+
+        float valor_total = salario_fixo + (total_vendas_dinheiro * taxa_de_comissao);
+
+        System.out.printf(" Nome do funcionário é: %s%n", nome);
+        System.out.printf(" Seu salário fixo é de: R$ %.2f\n", salario_fixo);
+        System.out.printf(" Recebe ao total com a comissão de vendas: R$ %.2f\n", valor_total);
+
+
+    }
+}
