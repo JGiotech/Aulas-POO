@@ -1,0 +1,19 @@
+public class VerificarIdade {
+
+    public int idade = 160;
+
+    public static void verificaIdade (int idade) {
+        if (idade < 0 || idade > 150) {
+            throw new IllegalArgumentException("Idade inválida: " + idade);
+        }
+        System.out.println("Idade válida: " + idade);
+    }
+    public static void main(String[] args){
+        try{
+            verificaIdade(160);
+    }catch (IllegalArgumentException e) {
+
+            System.out.println("Erro: " + e.getMessage());
+        }
+    }
+}
