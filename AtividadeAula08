@@ -75,8 +75,9 @@ public class Main {
         List<Livro> livros = new ArrayList<>();
 
         livros.add(new Livro ("O pequeno principe","Antoine-Marie-Roger de Saint-Exupéry", 59.99));
-        livros.add(new Ebook ("1984", "George Orwell", 19.90, 1.2));
         livros.add(new Livro ("Dom casmurro", "Machado de Assis", 60.00));
+        livros.add(new Livro ("Dom casmurro", "Machado de Assis", 60.00));
+        livros.add(new Ebook ("1984", "George Orwell", 19.90, 1.2));
         livros.add(new Ebook ("A Revolução dos Bichos","George Orwell", 14.90, 0.8));
 
         for (Livro livro : livros){
@@ -85,3 +86,6 @@ public class Main {
         }
     }
 }
+
+    
+
