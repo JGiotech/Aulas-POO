@@ -1,0 +1,87 @@
+import java.util.ArrayList;
+import java.util.List;
+public class Livro {
+
+    protected String titulo;
+    protected String autor;
+    protected double preco;
+
+    public Livro (String titulo, String autor, double preco){
+        this.titulo = titulo;
+        this.autor = autor;
+        this.preco = preco;
+
+    }
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public void exibirdetalhes() {
+        System.out.println("titulo: " + titulo);
+        System.out.println("autor: " + autor);
+        System.out.println("preco: " + preco);
+    }
+
+}
+
+     class Ebook extends Livro {
+        private double tamanhoArquivo;
+
+         public Ebook (String titulo, String autor, double preco, double tamanhoArquivo) {
+             super(titulo, autor, preco);
+             this.tamanhoArquivo = tamanhoArquivo;
+         }
+         public double getTamanhoArquivo() {
+             return tamanhoArquivo;
+         }
+
+         public void setTamanhoArquivo(double tamanhoArquivo) {
+             this.tamanhoArquivo = tamanhoArquivo;
+         }
+
+         @Override
+         public void exibirdetalhes() {
+             super.exibirdetalhes();
+             System.out.println("Tamanho do arquivo: " + tamanhoArquivo);
+
+    }
+}
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void main (String[] args) {
+        List<Livro> livros = new ArrayList<>();
+
+        livros.add(new Livro ("O pequeno principe","Antoine-Marie-Roger de Saint-Exupéry", 59.99));
+        livros.add(new Ebook ("1984", "George Orwell", 19.90, 1.2));
+        livros.add(new Livro ("Dom casmurro", "Machado de Assis", 60.00));
+        livros.add(new Ebook ("A Revolução dos Bichos","George Orwell", 14.90, 0.8));
+
+        for (Livro livro : livros){
+            livro.exibirdetalhes();
+            System.out.println();
+        }
+    }
+}
