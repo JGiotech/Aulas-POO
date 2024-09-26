@@ -1,0 +1,90 @@
+public class Forma {
+    public abstract double calcularArea();
+
+
+}
+    class Circulo extends Forma {
+        private double raio;
+
+        public Circulo(double raio) {
+            this.raio = raio;
+        }
+
+        public double getRaio() {
+            return raio;
+        }
+
+        public void setRaio(double raio) {
+            this.raio = raio;
+        }
+        @Override
+        public double calcularArea() {
+            return Math.PI * raio * raio;
+        }
+    }
+
+    class Retangulo extends Forma {
+        private double largura;
+        private double altura;
+
+        public Retangulo(double largura, double altura) {
+            this.largura = largura;
+            this.altura = altura;
+
+        }
+
+        double getLargura() {
+            return largura;
+        }
+
+        public void setLargura(double largura) {
+            this.largura = largura;
+        }
+
+        public double getAltura() {
+            return altura;
+        }
+
+        public void setAltura(double altura) {
+            this.altura = altura;
+        }
+
+        @Override
+        public double calcularArea(){
+            return altura * largura;
+        }
+    }
+     class Triangulo extends Forma{
+    private double altura;
+    private double base;
+
+    public Triangulo(double altura, double base){
+
+        this.altura = altura;
+        this.base = base;
+
+    }
+
+         public double getBase() {
+             return base;
+         }
+
+         public void setBase(double base) {
+             this.base = base;
+         }
+
+         public double getAltura() {
+             return altura;
+         }
+
+         public void setAltura(double altura) {
+             this.altura = altura;
+         }
+
+         @Override
+         public double calcularArea(){
+            return (base * altura) / 2;
+            
+
+         }
+}
